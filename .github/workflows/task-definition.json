@@ -1,0 +1,66 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-3:279586434493:task-definition/web-ramen-task:1",
+    "containerDefinitions": [
+        {
+            "name": "web-ramen",
+            "image": "279586434493.dkr.ecr.ap-northeast-3.amazonaws.com/web-ramen:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "web-ramen-3000-tcp",
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "systemControls": []
+        }
+    ],
+    "family": "web-ramen-task",
+    "executionRoleArn": "arn:aws:iam::279586434493:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE",
+        "MANAGED_INSTANCES"
+    ],
+    "requiresCompatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2026-01-17T03:51:22.630Z",
+    "registeredBy": "arn:aws:iam::279586434493:root",
+    "enableFaultInjection": false,
+    "tags": []
+}
